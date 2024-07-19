@@ -16,9 +16,6 @@ const checkServerStatus = async (): Promise<boolean> => {
     try {
         const response = await axios.get('https://api.mcstatus.io/v2/status/java/giomagi21.aternos.me');
         const msg = response.data.motd.clean
-        console.log(response.data);
-        
-        console.log(response.data.motd.clean);
 
         return msg === 'Welcome to the server of giomagi!';
     } catch (error) {
